@@ -11,10 +11,10 @@ jobs:
       - run: python html.py
       - name: change
       - run: |
-        git config --local user.email "Liubaolin20070125@outlook.com"
-        git config --local user.name "lzhbhlrpython"
-        git add .
-        git push
+          git config --local user.email "Liubaolin20070125@outlook.com"
+          git config --local user.name "lzhbhlrpython"
+          git add .
+          git push origin main
       - name: commit
       - uses: ad-m/github-push-action@master
       with:
