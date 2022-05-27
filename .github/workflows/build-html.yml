@@ -1,4 +1,5 @@
 name: build-html
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,6 +18,6 @@ jobs:
           git push origin main
       - name: commit
       - uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secret.token }}
-        branch: ${{ github.ref }}
+        with:
+          github_token: ${{ secret.token }}
+          branch: ${{ github.ref }}
