@@ -6,7 +6,7 @@ html_template = open('template.html', 'r',encoding="utf-8").read()
 def gen_html(output_path, title, file_list,save_path):
     content=''
     for filename, filepath in file_list.items():
-        content += '<a href="{0}" download="{1}">{1}</a><br/>\n'.format(filepath,filename)
+        content += '<a href="{0}" download="{1}">{1}</a><br/>\n\t\t'.format(filepath,filename)
     html_str = html_template.format(title=title, content=content)
     with open(os.path.join(output_path, save_path), 'w',encoding="utf-8") as f:
         f.write(html_str)
