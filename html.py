@@ -8,6 +8,7 @@ def gen_html(output_path, title, file_list,save_path):
     for filename, filepath in file_list.items():
         content += '<a href="{0}" download="{1}">{1}</a><br/>\n\t\t'.format(filepath,filename)
     html_str = html_template.format(title=title, content=content)
+    html_str += "\n<!-- Gen by GFSS. -->"
     with open(os.path.join(output_path, save_path), 'w',encoding="utf-8") as f:
         f.write(html_str)
 
