@@ -1,6 +1,6 @@
 name: build-html
 jobs:
-  check-bats-version:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
