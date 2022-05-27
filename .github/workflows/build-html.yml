@@ -5,19 +5,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - name: setup
+        uses: actions/setup-python@v3
         with:
           python-version: 3.9
       - name: RUN
-      - run: python html.py
+        run: python html.py
       - name: change
-      - run: |
+        run: |
           git config --local user.email "Liubaolin20070125@outlook.com"
           git config --local user.name "lzhbhlrpython"
           git add .
           git push origin main
       - name: commit
-      - uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secret.token }}
           branch: ${{ github.ref }}
