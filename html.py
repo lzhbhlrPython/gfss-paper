@@ -19,4 +19,4 @@ def file_list_gen(path):
 
 if __name__ == '__main__':
     file_list = file_list_gen('./download')
-    gen_html('.', 'Github File Share System(GFSS)', file_list, 'index.html')
+    gen_html('.', 'GFSS-PAPER PY文献查询系统', file_list, 'index.html')
