@@ -1,5 +1,7 @@
 name: build-html
 on: [push]
+env:
+  TZ: Asia/Shanghai
 jobs:
   build:
     runs-on: ubuntu-latest
