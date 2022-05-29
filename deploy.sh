@@ -1,3 +1,5 @@
+git rm index.html
+
 git pull
 
 git add ./static/*
