@@ -7,7 +7,7 @@ def gen_html(output_path, title, file_list, save_path):
     content=''
     print(file_list)
     for file in file_list:
-        content += '<a href={href} download={href}>{filename}</a><br/>\n\t\t'.format(href=file[1], filename=file[0])
+        content += '<a href={href} download={href}>{filename}</a><br/>\n\t\t\t'.format(href=file[1], filename=file[0])
     html_str = html_template.format(title=title, content=content,time=time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
     html_str += "\n<!-- Gen by GFSS. -->"
     with open(os.path.join(output_path, save_path), 'w',encoding="utf-8") as f:
